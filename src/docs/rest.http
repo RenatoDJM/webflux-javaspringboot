@@ -1,0 +1,11 @@
+### Get all movies
+
+GET http://localhost:8080/movies
+
+### Get movies by title
+
+GET http://localhost:8080/movies?title=zi
+
+### Get movies by prefix
+
+GET http://localhost:8080/movies/autocomplete?q=st
