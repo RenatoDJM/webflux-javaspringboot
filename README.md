@@ -1,4 +1,4 @@
-🎬 Movie Information API
+# 🎬 Movie Information API
 
 This project was developed as part of a real junior backend Java job test. It implements the requested features in a concise and functional way.
 
@@ -6,52 +6,64 @@ It is a reactive REST API built with Spring Boot + WebFlux, designed to consume 
 
 📡 https://data.sfgov.org/resource/yitu-d5am.json
 
-📌 Features
+---
 
-🔍 List all movies
+## 📌 Features
 
-🧠 Autocomplete movie titles by prefix
+- 🔍 List all movies  
+- 🧠 Autocomplete movie titles by prefix  
+- 🔎 Filter movies by title (case-insensitive)
 
-🔎 Filter movies by title (case-insensitive)
+---
 
-🚀 Endpoints
+## 🚀 Endpoints
 
-✅ 1. List All Movies
+### ✅ 1. List All Movies
 
-Request:
+**Request:**
 GET /movies
 
-Example:
+**Example:**
 GET http://localhost:8080/movies
 
-Description:
+**Description:**  
 Returns all movie records available from the public data source.
 
-🔎 2. Search by Title
-Request:
+---
+
+### 🔎 2. Search by Title
+
+**Request:**
 GET /movies?title={term}
 
-Example:
+**Example:**
 GET http://localhost:8080/movies?title=matrix
 
-Description:
+**Description:**  
 Filters movies where the title contains the given term (case-insensitive).
 
-🧠 3. Autocomplete Titles
-Request:
+---
+
+### 🧠 3. Autocomplete Titles
+
+**Request:**
 GET /movies/autocomplete?q={prefix}
 
-Example:
+makefile
+Copiar
+Editar
+
+**Example:**
 GET http://localhost:8080/movies/autocomplete?q=sta
 
-Description:
+**Description:**  
 Returns up to 10 unique movie titles that start with the given prefix.
 
+---
 
-💾 Sample Response
+## 💾 Sample Response
 
-json
-
+```json
 [
   {
     "title": "The Matrix",
@@ -67,15 +79,17 @@ json
   }
 ]
 
+```
 
-📦 Project Structure
+## 📦 Project Structure
 
+```
 src/
 └── main/
     └── java/
         └── com/
             └── yourapp/
-                ├── WebFluxApplication.java         # Main application class
+                ├── WebFluxApplication.java          # Main application class
                 ├── controller/
                 │   └── MovieInformationController.java
                 ├── model/
@@ -83,12 +97,13 @@ src/
                 └── service/
                     └── MovieInformationService.java
 
+```
+---
 
-🧪 How to Run
+## 🧪 How to Run
 Make sure you have Java 17+ and Maven installed.
 
 Clone the repository:
-
 
 git clone https://github.com/RenatoDJM/webflux-javaspringboot.git
 cd webflux-javaspringboot
@@ -99,16 +114,25 @@ Access the API via browser, Postman, or Insomnia:
 
 http://localhost:8080/movies
 
-🔧 Technologies Used
+---
 
+## 🔧 Technologies Used
 Java 17
+
 Spring Boot
+
 Spring WebFlux
+
 Project Lombok
+
 WebClient
 
-📝 License
+---
+
+## 📝 License
 This project uses public data and is available under the MIT License.
 
-🙋‍♂️ Contributions
+---
+
+## 🙋‍♂️ Contributions
 Contributions are welcome! Feel free to open issues and submit pull requests.
